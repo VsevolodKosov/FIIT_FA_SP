@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.22.1 FATAL_ERROR)
 
 project(mp_os LANGUAGES CXX)
 
@@ -23,6 +23,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(nlohmann_json)
 
 find_package(Boost COMPONENTS system container REQUIRED) # Ставить через vcpkg
+find_package(Crow REQUIRED)
 
 add_subdirectory(allocator)
 add_subdirectory(arithmetic)
